@@ -98,4 +98,6 @@
  0.code fork from https://github.com/openssl/openssl/tree/OpenSSL_1_0_2-stable
  1.call setenv_*.sh to compile openssl for x86_linux,android_arm and mipsel
  2.after compile,the openssl will bu install on $HOME/openssl-install/$ARCH ,refer setenv_*.sh for detail info 
+ 3.if you want to trim the size of ssl and crypt lib ,you can refer the follow cmd for config the openssl,which in setenv_*.sh
+   ./config no-asm shared  no-asm no-zlib no-threads no-sse2 no-compno-gmp no-rfc3779 no-krb5 no-rc5 no-zlib-dynamic no-hw no-cipher no-md2 no-md4 no-mdc2no-rc2 no-idea no-camellia no-ec no-ecdsa no-ecdh no-store no-ripemd  no-rc4no-bf no-cast no-ssl no-ssl2 no-ssl3 no-perlasm --prefix=$HOME/openssl-install/x86
  
